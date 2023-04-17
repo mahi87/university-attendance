@@ -25,3 +25,8 @@ class Attendance():
         days_to_fill = self.no_of_academic_days -1
         consecutive_leaves_consumed = 1
         return self._number_of_ways(days_to_fill, consecutive_leaves_consumed)
+    
+    def probability_to_miss_grad_ceremony(self):
+        miss_last_day = self.ways_to_miss_last_day()
+        total_ways_to_attend_classes = self.ways_to_attend_classes()
+        return f"{miss_last_day}/{total_ways_to_attend_classes}"

@@ -25,3 +25,16 @@ class TestAttendance(unittest.TestCase):
         expected_no_of_ways = 372
         at = Attendance(no_of_academic_days)
         self.assertEqual(at.ways_to_miss_last_day(), expected_no_of_ways)
+        
+    def test_1_should_return_probability_to_miss_grad_ceremony_in_string_format(self):
+        no_of_academic_days = 5
+        expected_probability = "14/29"
+        at = Attendance(no_of_academic_days)
+        self.assertEqual(at.probability_to_miss_grad_ceremony(), expected_probability)
+        
+    def test_2_should_return_probability_to_miss_grad_ceremony_in_string_format(self):
+        no_of_academic_days = 10
+        expected_probability = "372/773"
+        at = Attendance(no_of_academic_days)
+        self.assertEqual(at.probability_to_miss_grad_ceremony(), expected_probability)
+        
