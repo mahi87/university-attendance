@@ -1,7 +1,12 @@
 MAX_CONSECUTIVE_LEAVES_ALLOWED = 4
 
 class Attendance():
+    def _is_not_valid(self,no_of_academic_days):
+        return no_of_academic_days<1
+    
     def __init__(self, no_of_academic_days):
+        if self._is_not_valid(no_of_academic_days):
+            raise ValueError("Invalid Input")
         self.no_of_academic_days = no_of_academic_days
         self.cache = {}
         

@@ -40,3 +40,11 @@ class TestProbabilityToMissGradCeremony(unittest.TestCase):
         at = Attendance(no_of_academic_days)
         self.assertEqual(at.probability_to_miss_grad_ceremony(), expected_probability)
         
+class TestInvalidNumberOfAcademicDays(unittest.TestCase):
+    def test_should_raise_value_error_when_academic_days_are_less_than_1(self):
+        no_of_academic_days = 0
+        with self.assertRaises(ValueError) as error:
+            at = Attendance(no_of_academic_days)
+            
+        the_exception = error.exception
+        self.assertEqual(the_exception.args[0], "Invalid Input")
