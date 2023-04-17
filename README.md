@@ -1,4 +1,4 @@
-# university-attendance
+# University-Attendance
 ## Problem Statement
 In a university, your attendance determines whether you will be
 allowed to attend your graduation ceremony.
@@ -11,3 +11,16 @@ which is the Nth day.
 1. The number of ways to attend classes over N days.
 2. The probability that you will miss your graduation ceremony.
 
+## How to run?
+### Run main app
+To run the main application execute the following command on command prompt:
+```
+python main.py
+```
+
+
+### Run tests
+To execute test cases run the following command on command prompt:
+```
+python -m unittest
+```
