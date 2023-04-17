@@ -20,3 +20,8 @@ class Attendance():
         days_to_fill = self.no_of_academic_days
         consecutive_leaves_consumed = 0
         return self._number_of_ways(days_to_fill, consecutive_leaves_consumed)
+    
+    def ways_to_miss_last_day(self):
+        days_to_fill = self.no_of_academic_days -1
+        consecutive_leaves_consumed = 1
+        return self._number_of_ways(days_to_fill, consecutive_leaves_consumed)
